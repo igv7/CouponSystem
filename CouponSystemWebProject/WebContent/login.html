@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Coupon System Login</title>
+	</head>
+	<body>
+		<header>
+			<h1>Login to Coupon System Web Project</h1>
+		</header>
+		<!-- <a href="http://localhost:8080/CouponSystemWebProject/login"></a> -->
+		<!-- <a href="login">click here to login</a> -->
+		<div id="loginForm">
+			<form action = "login" method="get">
+				<h3>Please fill your name and password:</h3>
+				
+				<label for="name">Name</label>
+				<input id="name" type="text" name="name" placeholder="Enter Your name"/> &nbsp; &nbsp; &nbsp; &nbsp;
+				
+				<label for="password">Password</label>
+				<input id="password" type="password" name="password" placeholder="Enter Your password"/>
+				<br/>
+				
+				<label for="type">Choose Your Client Type</label>
+				<input type="radio" name="type" value="ADMINISTRATOR"/><strong>Admin</strong> &nbsp; &nbsp;
+				<input type="radio" name="type" value="COMPANY"/><strong>Company</strong> &nbsp; &nbsp;
+				<input type="radio" name="type" value="CUSTOMER"/><strong>Customer</strong>
+				
+				<h3><button type="submit" class="button">Login</button>
+					<button type="reset" class="button"	>Reset</button></h3>
+			</form>
+		</div>
+	</body>
+</html>
