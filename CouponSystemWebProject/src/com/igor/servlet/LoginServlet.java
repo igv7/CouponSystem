@@ -50,11 +50,6 @@ public class LoginServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-//		response.setContentType("text/html;charset=UTF-8");//
-//        PrintWriter out = response.getWriter();//
-//        Database.getDriverData();//
-//        Database.getDBUrl();//
-		
         
      // check whether there is a open session
 		HttpSession session = request.getSession(false);
@@ -71,11 +66,6 @@ public class LoginServlet extends HttpServlet {
 		String clientType = request.getParameter("type");
 		
 		
-//		session.setAttribute("name", userName);//
-//		session.setAttribute("password", password);//
-//		session.setAttribute("type", clientType);//
-		
-//		ClientType type = ClientType.valueOf(clientType);// convert String to ENUM
 		ClientType type = ClientType.valueOf(clientType.toUpperCase());// convert String to ENUM
 		
 		try {
@@ -115,18 +105,12 @@ public class LoginServlet extends HttpServlet {
 				response.getWriter().print("The UserName or the Password are incorrect! please try again");
 				response.sendRedirect("/login.html");
 			}
-//			String json = new Gson().toJson(clientFacade);
-//		    response.setContentType("application/json");
-//		    response.setCharacterEncoding("UTF-8");
-//		    response.getWriter().write(json);
 		    
 		} catch (Exception e) {
 			e.printStackTrace();
 			System.out.println("Wrong Password or UserName!");
 		}
 		
-//		out.close();//
-//		System.out.println(userName + " " + password + " " + clientType);
 	}
 
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
