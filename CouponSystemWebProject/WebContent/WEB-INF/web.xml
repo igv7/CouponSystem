@@ -28,21 +28,35 @@
 		<servlet-name>Jersey REST Services</servlet-name>
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
-
-
-
+	
+	
+	
+	
 	<filter>
-		<display-name>SessionFilter</display-name>
-		<filter-name>SessionFilter</filter-name>
-		<filter-class>com.igor.filter.SessionFilter</filter-class>
-	</filter>
-	<filter-mapping>
-		<filter-name>SessionFilter</filter-name>
-		<url-pattern>/sessionFilter</url-pattern>
-	</filter-mapping>
-	<filter-mapping>
-		<filter-name>SessionFilter</filter-name>
-		<servlet-name>Jersey REST Services</servlet-name>
-	</filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <filter-class>com.igor.corsfilter.CorsFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>CorsFilter</filter-name>
+        <url-pattern>/login</url-pattern>
+    </filter-mapping>
+	
+
+
+
+<!-- 	<filter> -->
+<!-- 		<display-name>SessionFilter</display-name> -->
+<!-- 		<filter-name>SessionFilter</filter-name> -->
+<!-- 		<filter-class>com.igor.filter.SessionFilter</filter-class> -->
+<!-- 	</filter> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>SessionFilter</filter-name> -->
+<!-- 		<url-pattern>/sessionFilter</url-pattern> -->
+<!-- 	</filter-mapping> -->
+<!-- 	<filter-mapping> -->
+<!-- 		<filter-name>SessionFilter</filter-name> -->
+<!-- 		<servlet-name>Jersey REST Services</servlet-name> -->
+<!-- 	</filter-mapping> -->
 
 </web-app>
